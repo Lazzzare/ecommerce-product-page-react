@@ -1,7 +1,7 @@
 import Hambruger from "./assets/Hamburger.svg";
 import Logo from "./assets/Logo.svg";
 import Store from "./assets/Store.svg";
-import Profile from "./assets/Profile.png";
+import Profile from "./assets/ProfileImage.png";
 import Exit from "./assets/Exit.svg";
 import uuid from "react-uuid";
 import { useState } from "react";
@@ -13,6 +13,7 @@ const Navbar = () => {
   return (
     // Navbar
     <>
+      {/* Hamburgen Menu */}
       {hamburgerMenu ? (
         <>
           <div className="absolute top-0 left-0 w-[70%] bg-slate-400 text-white h-screen pl-6 flex flex-col">
@@ -35,6 +36,7 @@ const Navbar = () => {
           </div>
         </>
       ) : (
+        // Desktop Navbar
         <>
           <div className="flex justify-between px-6 md:px-[165px] pt-[20px] md:pt-[43px] pb-[28px] items-center">
             {/* Left Side */}
@@ -58,15 +60,16 @@ const Navbar = () => {
               </ul>
             </div>
             {/* Right Side */}
-            <div className="flex flex-row items-center gap-x-[22px]">
+            <div className="flex flex-row items-center gap-x-[22px] md:gap-x-[45px]">
               <img src={Store} alt="Store" className="cursor-pointer" />
               <img
                 src={Profile}
                 alt="Profile"
-                className="w-[24px] h-[24px] md:w-[50px] md:h-[50px] cursor-pointer"
+                className="w-[24px] h-[24px] md:w-[50px] md:h-[50px] rounded-full cursor-pointer"
               />
             </div>
           </div>
+          <hr className="hidden md:flex w-[85%] items-center mx-auto mt-[10px] bg-[#E4E9F2]" />
         </>
       )}
     </>
