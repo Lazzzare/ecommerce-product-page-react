@@ -13,7 +13,7 @@ const Navbar = () => {
   return (
     // Navbar
     <>
-      {/* Hamburgen Menu */}
+      {/* Hamburgen Mobile Menu */}
       {hamburgerMenu ? (
         <>
           <div className="absolute top-0 left-0 w-[70%] bg-slate-400 text-white h-screen pl-6 flex flex-col">
@@ -36,8 +36,8 @@ const Navbar = () => {
           </div>
         </>
       ) : (
-        // Desktop Navbar
         <>
+          {/* Desktop Navbar */}
           <div className="flex justify-between px-6 md:px-[165px] pt-[20px] md:pt-[43px] pb-[28px] items-center">
             {/* Left Side */}
             <div className="flex flex-row items-center gap-x-4">
@@ -52,7 +52,7 @@ const Navbar = () => {
                 {navbarItems.map((item) => (
                   <li
                     key={uuid()}
-                    className="text-[#69707D] text-[15px] leading-[26px] cursor-pointer"
+                    className="text-[#69707D] text-[15px] leading-[26px] cursor-pointer relative after:absolute after:content-[''] after:w-0 after:h-1 after:bg-[#FF7E1B] after:left-0 after:-bottom-10 after:transition-all after:duration-300 hover:after:w-full"
                   >
                     {item}
                   </li>
@@ -69,7 +69,7 @@ const Navbar = () => {
               />
             </div>
           </div>
-          <hr className="hidden md:flex w-[85%] items-center mx-auto mt-[10px] bg-[#E4E9F2]" />
+          <hr className="hidden md:flex w-[85%] items-center mx-auto bg-[#E4E9F2]" />
         </>
       )}
     </>
