@@ -1,11 +1,14 @@
+// Images
 import Hambruger from "./assets/Hamburger.svg";
 import Logo from "./assets/Logo.svg";
 import Store from "./assets/Store.svg";
 import Profile from "./assets/ProfileImage.png";
 import Exit from "./assets/Exit.svg";
 import uuid from "react-uuid";
+// ReactHook
 import { useState } from "react";
 
+// NavbarItemsArray
 const navbarItems = ["Collections", "Men", "Women", "About", "Contact"];
 
 const Navbar = () => {
