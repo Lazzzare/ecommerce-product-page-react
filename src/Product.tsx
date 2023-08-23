@@ -25,12 +25,12 @@ const Product = ({ subtitle, title, content }: ProductProps) => {
           <img
             src={RightArrow}
             alt="RightArrow"
-            className="absolute top-[130px] right-4"
+            className="absolute top-[130px] right-4 cursor-pointer"
           />
           <img
             src={LeftArrow}
             alt="LeftArrow"
-            className="absolute top-[130px] left-4"
+            className="absolute top-[130px] left-4 cursor-pointer"
           />
         </div>
       </div>
