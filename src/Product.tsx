@@ -1,9 +1,29 @@
+import ImageSlider from "./ImageSlider";
 import FirstBootsImage from "./assets/FirstBootsImage.jpg";
+import SecongBootsImage from "./assets/SecondBootsImage.jpg";
+import ThirdBootsImage from "./assets/ThirdBootsImage.jpg";
+import FourthBootsImage from "./assets/FourthBootsImage.jpg";
 import RightArrow from "./assets/RightArrow.svg";
 import LeftArrow from "./assets/LeftArrow.svg";
 import Minus from "./assets/Minus.svg";
 import Plus from "./assets/Plus.svg";
 import ButtonStore from "./assets/ButtonStore.svg";
+
+const slides = [
+  {
+    image:
+      "https://tsbsankara-e-commerce-yt.netlify.app/images/image-product-1.jpg",
+  },
+  {
+    image: SecongBootsImage,
+  },
+  {
+    image: ThirdBootsImage,
+  },
+  {
+    image: FourthBootsImage,
+  },
+];
 
 interface ProductProps {
   subtitle: string;
@@ -15,7 +35,10 @@ const Product = ({ subtitle, title, content }: ProductProps) => {
   return (
     // Slider
     <div className="flex flex-col mt-7">
-      <div className="relative mx-auto">
+      <div className="w-[500px] h-[280px] my-0 mx-auto">
+        <ImageSlider slides={slides} />
+      </div>
+      {/* <div className="relative w-full max-w-[700px] mx-auto">
         <img
           src={FirstBootsImage}
           alt="FirstBootsImage"
@@ -33,7 +56,7 @@ const Product = ({ subtitle, title, content }: ProductProps) => {
             className="absolute top-[45%] flex justify-center items-center left-4 cursor-pointer"
           />
         </div>
-      </div>
+      </div> */}
       {/* Product Info (Title, Description) */}
       <div className="px-6">
         <div className="mt-6 pb-6">
