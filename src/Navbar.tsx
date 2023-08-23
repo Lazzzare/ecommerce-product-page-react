@@ -19,7 +19,7 @@ const Navbar = () => {
       {/* Hamburgen Mobile Menu */}
       {hamburgerMenu ? (
         <>
-          <div className="absolute top-0 left-0 w-[70%] bg-slate-400 text-white h-screen pl-6 flex flex-col">
+          <div className="absolute top-0 left-0 w-[70%] z-10 bg-slate-400 text-white h-screen pl-6 flex flex-col">
             <img
               onClick={() => setHamburgerMenu(false)}
               src={Exit}
