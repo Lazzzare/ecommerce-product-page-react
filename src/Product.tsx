@@ -1,4 +1,4 @@
-import FirstBootsImage from "./assets/FirstBootsImage.png";
+import FirstBootsImage from "./assets/FirstBootsImage.jpg";
 import RightArrow from "./assets/RightArrow.svg";
 import LeftArrow from "./assets/LeftArrow.svg";
 import Minus from "./assets/Minus.svg";
@@ -19,18 +19,18 @@ const Product = ({ subtitle, title, content }: ProductProps) => {
         <img
           src={FirstBootsImage}
           alt="FirstBootsImage"
-          className="w-full h-full mx-auto rounded-lg object-cover"
+          className="w-full h-[375px] mx-auto rounded-2xl object-cover"
         />
-        <div className="max-w-[263px]">
+        <div className="">
           <img
             src={RightArrow}
             alt="RightArrow"
-            className="absolute top-[130px] right-4 cursor-pointer"
+            className="absolute top-[45%] flex justify-center items-center right-4 cursor-pointer"
           />
           <img
             src={LeftArrow}
             alt="LeftArrow"
-            className="absolute top-[130px] left-4 cursor-pointer"
+            className="absolute top-[45%] flex justify-center items-center left-4 cursor-pointer"
           />
         </div>
       </div>
@@ -65,12 +65,13 @@ const Product = ({ subtitle, title, content }: ProductProps) => {
           <img src={Plus} alt="Plus" className="cursor-pointer" />
         </div>
         {/* Add Cart Button */}
-        <button className="mt-6 bg-[#FF7E1B] text-white font-bold py-[18px] rounded-[10px]">
-          <div className="flex flex-row mx-auto items-center justify-center gap-x-[15px]">
-            <img src={ButtonStore} alt="ButtonStore" />
-            <h2>Add to cart</h2>
-          </div>
-        </button>
+        <div
+          className="mt-4 bg-[#FF7E1B] rounded-[10px] py-5 flex
+        justify-center items-center mx-auto text-white font-bold gap-x-4 cursor-pointer"
+        >
+          <img src={ButtonStore} alt="ButtonStore" />
+          <p>Add to cart</p>
+        </div>
       </div>
     </div>
   );
