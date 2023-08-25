@@ -6,3 +6,9 @@
 body {
   font-family: "Kumbh Sans", sans-serif;
 }
+
+@media (min-width: 1024) {
+  .big-image {
+    height: 900px;
+  }
+}
