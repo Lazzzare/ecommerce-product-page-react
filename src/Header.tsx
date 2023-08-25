@@ -25,7 +25,7 @@ const Header = ({ products }: ProductProps) => {
           {/* HeaderLogo */}
           <img src={Logo} alt="LogoImage" className="cursor-pointer" />
           {/* HeaderNavList */}
-          <nav>
+          <nav className="hidden">
             <ul className="flex items-center justify-start gap-4">
               {HeaderNavList.map((navItem) => (
                 <li className="">{navItem}</li>
@@ -37,7 +37,7 @@ const Header = ({ products }: ProductProps) => {
         <div className="flex items-center justify-start gap-4">
           {/* StoreIcon */}
           <button>
-            <AiOutlineShoppingCart />
+            <AiOutlineShoppingCart className="text-2xl text-slate-600" />
           </button>
           {/* AvatarImage */}
           <img src={Avatar} alt="ProfileImage" className="w-12" />
