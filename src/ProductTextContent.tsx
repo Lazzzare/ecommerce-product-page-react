@@ -4,7 +4,9 @@ import Plus from "./images/icon-plus.svg";
 import { AiOutlineShoppingCart } from "react-icons/ai";
 
 const ProductTextContent = () => {
+  // Amount of product
   const [amount, setAmount] = useState(0);
+
   const handleMinus = () => {
     setAmount(amount - 1);
     if (amount <= 0) setAmount(0);
