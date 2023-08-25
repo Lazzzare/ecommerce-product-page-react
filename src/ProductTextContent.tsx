@@ -25,7 +25,7 @@ const ProductTextContent = () => {
         weather can offer.
       </p>
 
-      <div className="flex flex-wrap text-center justify-between">
+      <div className="flex flex-wrap text-center justify-between lg:flex-col lg:items-start lg:gap-2">
         <ul className="flex items-center gap-5">
           <li className="text-slate-900 font-bold text-2xl">$125.00</li>
           <li className="text-orange-400 bg-orange-100 py-1 px-2 rounded shadow inline-block text-xs lg:text-[13px] font-bold uppercase tracking-wide md:tracking-wide-[2px]">
@@ -37,8 +37,8 @@ const ProductTextContent = () => {
         </p>
       </div>
 
-      <div className="mt-6">
-        <ul className="flex items-center justify-between bg-slate-100 py-2 px-4 rounded shadow">
+      <div className="mt-6 lg:flex items-center justify-between gap-2">
+        <ul className="flex items-center justify-between bg-slate-100 py-2 px-4 rounded shadow lg:flex-1">
           <li onClick={handleMinus} className="cursor-pointer">
             <img src={Minus} alt="MinusIcon" />
           </li>
@@ -48,8 +48,11 @@ const ProductTextContent = () => {
           </li>
         </ul>
 
-        <div>
-          <button className="flex items-center justify-center gap-4 bg-orange-500 py-2 px-4 text-white shadow mt-5 w-full text-center">
+        <div className="flex-1">
+          <button
+            className="flex items-center justify-center gap-4 bg-orange-500 py-2 px-4 text-white shadow font-bold mt-5 w-full rounded-md text-center lg:mt-0
+          hover:bg-orange-600 transition-all duration-200"
+          >
             <AiOutlineShoppingCart /> Add to cart
           </button>
         </div>
